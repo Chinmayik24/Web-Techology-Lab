@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student form</title>
+        <style>
+            .format{
+                background-color: honeydew;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="format">
+        <h2><u>Student Feedback Form</u></h2><br>
+        <form>
+            <label for="sname">Name:</label>
+            <input type="text" id="sname" name="sname" placeholder="your name"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="your email"><br><br>
+            <label for="usn">USN:</label>
+            <input type="text" id="usn" name="usn" placeholder="your usn"><br><br>
+            <label for="sem">Semester:</label>
+            <select name="sem">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select><br><br>
+            <label for="branch">Branch:</label><br>
+            <input type="radio" value="CSE">CSE<br>
+            <input type="radio" value="ISE">ISE<br>
+            <input type="radio" value="ECE">ECE<br>
+            <input type="radio" value="EEE">EEE<br>
+            <input type="radio" value="EI">EI<br>
+            <input type="radio" value="ME">ME<br>
+            <input type="radio" value="CV">CV<br><br>
+            <label for="feedback">Feedback:</label><br>
+            <textarea rows="8" cols="50" name="feedback"></textarea><br>
+            <input type="checkbox" name="req">
+            <label for="req">Send me a copy of the message</label><br><br>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </form>
+    </div>
+    </body>
+</html>
