@@ -1,0 +1,110 @@
+<htm>
+    <head>
+        <title>JSSSTU</title>
+        <style>
+            nav {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
+      #nav-links a,
+      #option-links a {
+        display: inline-block;
+        padding:20px;
+        text-decoration: None;
+        color: black;
+        border-radius: 4px;
+        background-color: burlywood; 
+      }
+
+      #option-links {
+        display: flex;
+        justify-content: space-evenly;
+        
+      }
+      
+      #option-links a {
+        background-color: rgb(73, 73, 191);
+        color: white;
+      }
+
+      h1{
+        text-align: center;
+      }
+      .info{
+        background-color: lightyellow;
+        padding:1px;
+      }
+      p{
+        font-size:30px;
+      }
+      footer {
+        margin-top: 15px;
+        display: flex;
+        background-color: rgb(4, 77, 56);
+        color: white;
+        justify-content: space-around;
+      }
+      footer a,
+      footer p {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 1.25rem;
+      }
+
+        </style>
+    </head>
+    <body>
+           <nav><img src="data:image/jpeg;base64,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" height="70" width="120" alt="SJCE Logo" />
+            <div id="nav-links">
+              <a href="">About</a>
+              <a href="">Academic</a>
+              <a href="">Research</a>
+              <a href="">Programmes</a>
+              <a href="">Placement</a>
+              <a href="">Ranking</a>
+              <a href="">Life at JSSSTU</a>
+              <a href="">Others</a>
+            </div>
+          </nav><br><br>
+          <br><div id="option-links">
+            <a href="">Time Table</a>
+            <a href="">Examination Notification</a>
+            <a href="">Admission Online</a>
+            <a href="">Student / Staff Login</a>
+          </div><br><br>
+          <h1>WELCOME TO JSS SCIENCE AND TECHNOLOGY UNIVERSITY</h1>
+          <img src="https://images.collegedunia.com/public/college_data/images/campusimage/15831423763.jpeg" height="600" width="100%">
+          <div class="info">
+            <p>JSS STU is the second University established by JSS Mahavidyapeetha, besides the JSS Academy of Higher Education and Research a health sciences focused deemed university at Mysuru.
+
+                JSS STU plays a key role in providing high quality skilled manpower in the fields of Science, Engineering & Technology and Management to transform the society through research and innovation.
+                
+                JSS STU is committed to deliver quality education at all levels and provide opportunities for aspiring youth to meet the global needs of society in every sector.Established in 1963 as SJCE has 12 departments in engineering, a Master of Computer Applications department. It was affiliated to the VTU, Belgaum, but now it's a Constituent College of JSS Science and Technology University from 2016 - 2017 academic year. SJCE is accredited by the AICTE.</p>
+          </div>
+          <footer>
+            <div>
+              <h3>Quick Links</h3>
+              <a href=""> UGC Reports</a>
+              <a href="">UG Regulations</a>
+              <a href="">PG Regulations</a>
+              <a href="">Ph.D-Regulation</a>
+              <a href="">JSS STU Act</a>
+              <a href="">JSS STU STATUTES</a>
+              <a href="">NIRF</a>
+              <a href="">AICTE Feedback</a>
+              <a href="">COMEDK</a>
+              <a href="">Departments</a>
+              <a href="">Calendar of Events</a>
+            </div>
+            <div>
+              <h3>JSSSTU Contact</h3>
+              <p>JSS STU Campus, Mysuru 570006</p>
+              <p>0821-2548285</p>
+              <p>0821-2548286</p>
+              <p>enquire@jssstuniv.in</p>
+            </div>
+          </footer>
+    </body>
+</htm>
