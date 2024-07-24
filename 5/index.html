@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>CSS demonstartion</title>
+        <style>
+            .photo1{ 
+                width : 100%;
+                height: 550px;
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEF27S5Woank9QJ7hC9hh7_2tYNfsGsKs-tA&s');
+                background-repeat: repeat;
+            }
+            .photo2{ 
+                width : 100%;
+                height: 550px;
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEF27S5Woank9QJ7hC9hh7_2tYNfsGsKs-tA&s');
+                background-repeat: no-repeat;
+            }
+            a{
+                color:red
+            }
+            a:hover{
+                color:blue
+            }
+            a:visited{
+                color:purple
+            }
+            .hide{
+                visibility:hidden;
+            }
+            .hoverme:hover + .hide{
+                visibility: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Different font styles</h1>
+        <p style= "font-family:Times New Roman;">This is Times New Roman</p>
+        <p style=" font-family: Helvetica;">This is Helvetica</p>
+        <p style= "font-family:Arial,sans-serif;font-size:1.5em">This is Arial</p> 
+        <p style="font-family:Segoe UI">This is Segoe</p>
+
+        <h1>Background Repeat property</h1>
+            <p>Repeat</p><div class = "photo1"></div><br>
+            <p>No repeat</p><div class="photo2"></div>
+
+        <h1>Links</h1>
+        <a href="https://www.australia.com/en-in">Link1</a><br>
+        <a href="https://www.visitdubai.com/en/">Link2</a><br>
+
+        <h1>Element visibility</h1>
+        <div class="hoverme">Hover over me</div>
+        <div class="hide">
+            <img src="https://t4.ftcdn.net/jpg/02/17/53/41/360_F_217534184_ZFxSGmJupvRvBHC4DMyQUNnylDvX7OvX.jpg" alt="invisible dancer">
+            <p>I'm an invisible dancer! I become visible when someone hovers over me</p></div>
+    </body>
+</html>
