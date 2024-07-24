@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            #forms{
+                padding:2em;
+                background-color: rgb(169, 209, 209);
+            }
+            h2{
+                color:white;
+                background-color:rgb(35, 32, 32);
+                padding:1em;
+                font-size: 30px;;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function validateform(){
+                var name=document.getElementById("name").value;
+                var email=document.getElementById("email").value;
+                var mobile=document.getElementById("mobile").value;
+                var gender=document.getElementById("gender").value;
+                var colour=document.getElementById("colour").value;
+
+                if(name===""){
+                    alert("Please enter your name");
+                    return false;
+                }
+                if(email==="" || !email.includes(".") || !email.includes("@") ){
+                    alert("Please enter your email properly");
+                    return false;
+                }
+                if(mobile==="" || mobile.length!=10){
+                    alert("Please enter your mobile number correctly");
+                    return false;
+                }
+                if(gender===""){
+                    alert("Please enter your gender");
+                    return false;
+                }
+                if(colour===""){
+                    alert("Please enter your favourite colour");
+                    return false;
+                }
+
+                var info= "Name: "+name+ "\n"+"Email: "+email+ "\n"+"Mobile: "+mobile+"\n"+"Gender: "+gender+"\n"+"Favourite Colour: "+colour;
+                alert(info);
+            }
+        </script>
+        <center><h2>Form validation</h2></center>
+        <form id="forms" align="center">
+            <input type="text" id="name" placeholder="your name"><br><br>
+            <input type="text" id="email" placeholder="your email"><br><br>
+            <input type="text" id="mobile" placeholder="your mobile number"><br><br>
+            <select id="gender">
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br><br>
+            <input type="text" id="colour" placeholder="your favourite colour"><br><br>
+            <button type="button" onclick="validateform()">Submit</button>
+        </form>
+    </body>
+</html>
