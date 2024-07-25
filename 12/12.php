@@ -16,6 +16,7 @@
                 $uname=$_POST['username'];
                 $password=$_POST['password'];
 
+                #create a file and store username and password in the format - username,password
                 $file='login.txt';
                 $users=file($file);
 
