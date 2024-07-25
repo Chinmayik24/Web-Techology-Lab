@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            body{
+                background-color: rgb(139, 78, 78);
+                color:white;
+            }
+        </style>
+        <script>
+            function validateform(){
+                var userid=document.getElementById("username").value;
+                var name=document.getElementById("name").value;
+                var email=document.getElementById("email").value;
+                var password=document.getElementById("password").value;
+
+                if (userid.length<5 || userid.length>12){
+                    alert("User Id should be 5-12 letters");
+                    return false;
+                }
+                if(name.length<10 || !/^[A-Za-z ]+$/.test(name)){
+                    alert("Name should contain only alphabets and atleast have 15 characters");
+                    return false;
+                }
+                if(!/^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8}$/.test(password)){
+               alert("Password must be eight characters including one uppercase letter, one special character and alphanumeric characters");
+               return false; 
+            }
+            if(email==="" || !email.includes(".") || !email.includes("@") ){
+                    alert("Invalid email address");
+                    return false;
+            }
+
+                var info="UserID: "+userid+"\n"+"Name: "+name+"\n"+"Email: "+email+"\n"+"Password: "+password+"\n";
+                alert(info);
+            }
+        </script>
+    </head>
+    <body>
+        <form><center>
+            <h2>REGISTRATION PAGE</h2>
+            <label for="username">Username: </label>
+            <input type="type" id="username"><br><br>
+            <label for="name">Name: </label>
+            <input type="text" id="name"><br><br>
+            <label for="email">Email: </label>
+            <input type="text" id="email"><br><br>
+            <label for="password">Password: </label>
+            <input type="text" id="password"><br><br>
+            <input type="button" value="submit" onclick="validateform()">
+        </form></center>
+    </body>
+</html>
