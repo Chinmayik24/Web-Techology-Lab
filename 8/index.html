@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Marks</title>
+        <style>
+            h1{
+                background-color: gray;
+                padding:1em;
+            }
+            .forms{
+                background-color:lightgrey;
+                padding:1em;
+            }
+        </style>
+        <script>
+            function calculate(){
+                var usn=document.getElementById("usn").value;
+                var code=document.getElementById("code").value;
+                var m1=parseInt(document.getElementById("m1").value);
+                var m2=parseInt(document.getElementById("m2").value);
+                var m3=parseInt(document.getElementById("m3").value);
+
+                if (usn===""){
+                    alert("Please enter your register number");
+                    return false;
+                }
+                if (code===""){
+                    alert("Please enter the course code");
+                    return false;
+                }
+                if (m1>20||m2>20||m3>20){
+                    alert("Marks should be in the range 0-20");
+                    return false;
+                }
+
+                var info="USN: "+usn+"\n"+"Course Code: "+code+"\n"+"Marks 1: "+m1+"\n"+"Marks 2: "+m2+"\n"+"Marks 3: "+m3+"\n";
+                alert(info);
+                var marks = [m1,m2,m3];
+                marks.sort();
+                var avg = (marks[1]+marks[2])/2;
+                alert(avg);
+            }
+        </script>
+    </head>
+    <body><center>
+        <h1>Marks Details</h1>
+        <form class="forms">
+            <label for="usn">Register Number: </label>
+            <input type="text" name="usn" id="usn" placeholder="your usn"><br><br>
+            <label for="code">Course Code: </label>
+            <input type="text" name="code" id="code" placeholder="course code"><br><br>
+            <label for="m1">Marks 1: </label>
+            <input type="text" id="m1" name="m1" placeholder="your marks1"> <br><br>
+            <label for="m2">Marks 2: </label>
+            <input type="text" id="m2" name="m2" placeholder="your marks2"> <br><br>
+            <label for="m3">Marks 3: </label>
+            <input type="text" id="m3" name="m3" placeholder="your marks3"> <br><br>
+            <input type="button" value="submit" onclick="calculate()">
+        </form></center>
+    </body>
+</html>
